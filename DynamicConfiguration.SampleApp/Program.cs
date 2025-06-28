@@ -37,27 +37,3 @@ while (true)
     Console.WriteLine("FINISH ================================================================");
     await Task.Delay(delayTime);
 }
-// Console.WriteLine("Çıkmak için bir tuşa bas...");
-// Console.ReadLine();
-
-
-// using StackExchange.Redis;
-
-// var config = new ConfigurationOptions
-// {
-//     EndPoints = { "redis-12103.c328.europe-west3-1.gce.redns.redis-cloud.com:12103" },
-//     User = "default", // Redis Cloud'da zorunlu
-//     Password = "C4al4211Dz8HlIpDCox5PR6CJuHbr41J",
-//     Ssl = true,
-//     AbortOnConnectFail = false
-// };
-
-// var connection = await ConnectionMultiplexer.ConnectAsync(config);
-// Console.WriteLine("Bağlantı başarılı");
-
-// var db = connection.GetDatabase();
-// Console.WriteLine("1.adım");
-// await db.StringSetAsync("testKey", "hello from redis", null);
-// Console.WriteLine("2.adım");
-// // var value = await db.StringGetAsync("testKey");
-// // Console.WriteLine("testKey: " + value);
