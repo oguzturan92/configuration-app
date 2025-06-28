@@ -16,6 +16,39 @@
 - Design ve Architectural Pattern'ler kullanıldı.
 - TDD (Test Driven Development) yazıldı
 
+# KURULUM
+
+# mssql'de bir tablo oluşturun
+CREATE DATABASE dbName;
+
+# veritabanınıza konumlanın
+USE dbName;
+
+# tablo ekleyin
+CREATE TABLE ConfigurationItems (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Name NVARCHAR(100) NOT NULL,
+    Type NVARCHAR(20) NOT NULL, -- string, bool, int, double
+    Value NVARCHAR(500) NOT NULL,
+    IsActive BIT NOT NULL,
+    ApplicationName NVARCHAR(100) NOT NULL
+);
+
+# bilgileri ekleyin
+INSERT INTO ConfigurationItems (Name, Type, Value, IsActive, ApplicationName)
+VALUES 
+('SiteName', 'string', 'soty.io', 1, 'SERVICE-A'),
+('IsBasketEnabled', 'bool', 'true', 1, 'SERVICE-A'),
+('MaxItemCount', 'int', '50', 1, 'SERVICE-A'),
+('SomeOtherKey', 'string', 'hidden', 0, 'SERVICE-A'),
+('AnotherServiceKey', 'string', 'notForYou', 1, 'SERVICE-B');
+
+# webuı katmanını çalıştırın ve /configuration adresine giderek crud işlemlerini gerçekleştirin (dotnet run)
+# SampleApp console projesini çalıştırın (dotnet run)
+# test için test projesini çalıştırın (dotnet test)
+
+
+# ÇALIŞMA ANINA AİT GÖRSELLER
 
 # Belirli Aralıklarla Kontrol Edilmesi ve SERVICE-B'nin, SERVICE-A'nın Value'suna Erişemiyor Olması
 ![Image](https://github.com/user-attachments/assets/45989fd5-505f-45a9-8fed-21707e620987)
