@@ -17,7 +17,8 @@
 - TDD (Test Driven Development) yazıldı
 
 
+# Belirli Aralıklarla Kontrol Edilmesi ve SERVICE-B'nin, SERVICE-A'nın Value'suna Erişemiyor Olması
 ![Image](https://github.com/user-attachments/assets/45989fd5-505f-45a9-8fed-21707e620987)
 
-
+# Storage'ye Erişim Olmadığında, Cache'den Verilerin Alınması
 ![Image](https://github.com/user-attachments/assets/1e0acc01-d891-434d-b6ef-53b138d6e016)
