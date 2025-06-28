@@ -16,4 +16,8 @@
 - Design ve Architectural Pattern'ler kullanıldı.
 - TDD (Test Driven Development) yazıldı
 
-- 
+
+![Image](https://github.com/user-attachments/assets/45989fd5-505f-45a9-8fed-21707e620987)
+
+
+![Image](https://github.com/user-attachments/assets/1e0acc01-d891-434d-b6ef-53b138d6e016)
