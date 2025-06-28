@@ -1,0 +1,32 @@
+@model ConfigurationItem
+
+@{
+    ViewData["Title"] = "Konfigürasyon Düzenle";
+}
+
+<h2>Yeni Konfigürasyon</h2>
+
+<form asp-action="Edit" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Type" class="form-label"></label>
+        <input asp-for="Type" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Value" class="form-label"></label>
+        <input asp-for="Value" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="ApplicationName" class="form-label"></label>
+        <input asp-for="ApplicationName" class="form-control" />
+    </div>
+    <div class="form-check">
+        <input asp-for="IsActive" class="form-check-input" />
+        <label asp-for="IsActive" class="form-check-label"></label>
+    </div>
+    <button type="submit" class="btn btn-success mt-3">Kaydet</button>
+    <a class="btn btn-dark mt-3" asp-controller="Configuration" asp-action="Index" type="button">Geri</a>
+</form>

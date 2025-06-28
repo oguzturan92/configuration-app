@@ -1,0 +1,61 @@
+@model List<DynamicConfiguration.Core.Models.ConfigurationItem>
+
+@{
+    ViewData["Title"] = "Konfigürasyon Listesi";
+}
+
+<h2>Konfigürasyon Listesi</h2>
+
+<p>
+    <a asp-controller="Configuration" asp-action="Create" class="btn btn-primary">Yeni Kayıt Ekle</a>
+</p>
+
+<input type="text" id="searchInput" placeholder="İsme göre filtrele..." class="form-control mb-3"/>
+
+<table class="table table-bordered" id="configTable">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Value</th>
+            <th>IsActive</th>
+            <th>Application</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Type</td>
+                <td>@item.Value</td>
+                <td>@(item.IsActive ? "Yes" : "No")</td>
+                <td>@item.ApplicationName</td>
+                <td>
+                    <a asp-controller="Configuration" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Düzenle</a>
+                </td>
+                <td>
+                    <a asp-controller="Configuration" asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Sil</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <script>
+        const input = document.getElementById("searchInput");
+        input.addEventListener("keyup", function () {
+            const filter = input.value.toLowerCase();
+            const rows = document.querySelectorAll("#configTable tbody tr");
+
+            rows.forEach(row => {
+                const name = row.cells[0].innerText.toLowerCase();
+                row.style.display = name.includes(filter) ? "" : "none";
+            });
+        });
+    </script>
+}

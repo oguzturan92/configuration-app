@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DynamicConfiguration.WebUI.props" />
+</Project>
