@@ -4,10 +4,10 @@ using DynamicConfiguration.Core.SeedData;
 var delayTime = 3000;
 
 // MSSQL
-// var connectionString = "Server=.\\SQLEXPRESS;Database=SecilStoreDb;Integrated Security=True;TrustServerCertificate=True;";
+// var connectionString = "Server=.\\SQLEXPRESS;Database=dbName;Integrated Security=True;TrustServerCertificate=True;";
 
 // REDIS
-var connectionString = "redis-12103.c328.europe-west3-1.gce.redns.redis-cloud.com:12103,password=C4al4211Dz8HlIpDCox5PR6CJuHbr41J,ssl=False,abortConnect=false";
+var connectionString = "redis-12103.c328.europe-west3-1.gce.redns.redis-cloud.com:12103,password=sifreniz,ssl=False,abortConnect=false";
 
 // SEED VERİLERİ - MSSQL AÇIK OLDUĞUNDA BUNU KAPATIN
 await RedisSeeder.SeedAsync(connectionString);
